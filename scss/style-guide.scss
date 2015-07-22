@@ -1,4 +1,6 @@
-@import 'bourbon'; // http://bourbon.io/
+// out: ../css/style-guide.css
+
+@import 'bourbon/bourbon'; // http://bourbon.io/
 
 @import '../partials/layout'; // responsive grid and media queries
 
@@ -8,7 +10,7 @@ $color-1: #5f8ee4; // Cornflower Blue - Action color
 $color-2: #19191a; // Dark Blue
 $color-3: #e4655f; // Red
 $color-4: #e6e6e6; // light grey
-$color-5: #ffffff; // white
+$color-5: #fff; // white
 
 // additional colors
 
@@ -20,9 +22,9 @@ $alert: $color-3;  // red
 $primary-font: 'Merriweather', serif;
 $secondary-font: 'Open Sans', sans-serif;
 
-/* -------------------------------- 
+/* --------------------------------
 
-xBackground 
+xBackground
 
 -------------------------------- */
 
@@ -31,7 +33,7 @@ body {
 	background-color: $color-5;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 xPatterns
 
@@ -46,9 +48,9 @@ xPatterns
 	padding: 6px;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xNavigation 
+xNavigation
 
 -------------------------------- */
 
@@ -132,9 +134,9 @@ header {
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xPage title 
+xPage title
 
 -------------------------------- */
 
@@ -147,9 +149,9 @@ main > h1 {
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xTypography 
+xTypography
 
 -------------------------------- */
 
@@ -205,9 +207,9 @@ p {
 	}
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xButtons 
+xButtons
 
 -------------------------------- */
 
@@ -265,13 +267,13 @@ xButtons
 }
 
 .cd-buttons .cd-box:nth-of-type(2) span {
-	/* CSS class name color */ 
+	/* CSS class name color */
 	color: $color-1;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xIcons 
+xIcons
 
 -------------------------------- */
 
@@ -281,9 +283,9 @@ xIcons
 	height: 32px;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xForm 
+xForm
 
 -------------------------------- */
 
