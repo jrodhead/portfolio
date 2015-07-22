@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- this file needs to be saved without BOM. See for more info:
-http://stackoverflow.com/questions/10199355/php-include-causes-white-space-at-the-top-of-the-page -->
 <head>
 <meta charset="utf-8">
 <meta property="og:title" content="Jared Headrick" />
@@ -14,7 +12,11 @@ http://stackoverflow.com/questions/10199355/php-include-causes-white-space-at-th
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <title>Jared Headrick</title>
 <style>
-
+header {padding:10em 0;text-align:right;}
+.card {float:left;padding:1%;width:23%;}
+@media only screen and (max-width: 760px) {
+	.card {
+		width:100%; } }
 </style>
 <!-- add google analytics tracking here -->
 </head>
@@ -55,28 +57,24 @@ http://stackoverflow.com/questions/10199355/php-include-causes-white-space-at-th
 			The tools depend on the job, and knowing when to use the correct tool is a skill in itself. My toolbox is constantly expanding, but regardless of the job, I have a clear process for designing a solution: strategy, research and analysis, design, and iteration.
 		</p>
 		<div class="card">
-			<img alt="strategy icon" src="assets/strategy.png">
 			<h1>Strategy</h1>
 			<p>
 				I strive to understand why something is needed before anything else. I understand that a product cannot be all things to all people and that a clear product vision is essential to success. To get there, I’ll create personas, vision statements, key functions and characteristic tradeoffs, mood boards, affinity diagrams.
 			</p>
 		</div>
 		<div class="card">
-			<img alt="analysis icon" src="assets/analysis.png">
 			<h1>Analysis</h1>
 			<p>
 				The next step is to gather and digest any useful data that will inform the direction to take the solution. This includes user stories, business requirements, stakeholder interviews, current and future state analysis, process maps, system context diagrams, site maps.
 			</p>
 		</div>
 		<div class="card">
-			<img alt="design icon" src="assets/design.png">
 			<h1>Design</h1>
 			<p>
 				The really fun stuff - this is where I take all of the information I've gathered and start producing ideas. These can be in the form of sketches, wireframes, mockups, prototypes, HTML, CSS, jQuery, Interface Builder.
 			</p>
 		</div>
 		<div class="card">
-			<img alt="iterate icon" src="assets/iterate.png">
 			<h1>Iterate</h1>
 			<p>
 				It is rare to achieve perfection on the first try. Whether it is through reviews and feedback from my teammates or clients and users, the most important step is to review and revise. This includes review meetings, user acceptance testing, retrospectives.
@@ -92,8 +90,9 @@ http://stackoverflow.com/questions/10199355/php-include-causes-white-space-at-th
 	</article>
 -->
 </section>
-<footer>
+<!--<footer>
 <p role="contentinfo">&copy; <?php echo date("Y") ?> Jared Headrick</p>
 </footer>
+-->
 </div>
 </body>
