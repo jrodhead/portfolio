@@ -22,37 +22,81 @@ $alert: $color-3;  // red
 $primary-font: 'Merriweather', serif;
 $secondary-font: 'Open Sans', sans-serif;
 
-/* --------------------------------
-
-xBackground
-
--------------------------------- */
+// background
 
 body {
 	/* this is the page background */
 	background-color: $color-5;
 }
 
-/* --------------------------------
+// page margins
 
-xPatterns
+.page {
+	width:600px;
+	margin:0 auto;
+}
 
--------------------------------- */
+header {
+	@extend .page
+}
 
-.cd-box {
-	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
+section, header {
+	> h1, > p {@extend .page;}
+}
+
+// header
+
+header {
+	height: 60rem;
+
+	h1, p {
+		text-align: right;
+		color: $color-5;
+	}
+
+	h1 {
+		padding-top: 40rem;
+	}
+}
+
+// sections
+section:nth-of-type(odd) {
+	background-color: $color-5;
+	color: $color-2;
+	p {
+		color: lighten($color-2, 25%);
+	}
+}
+
+section:nth-of-type(even) {
+	background-color: $color-2;
+	color: $color-5;
+	p {
+		color: lighten($color-5, 25%);
+	}
+}
+
+// cards
+.card-wrap {
+	margin-top: 1rem;
+}
+
+.card {
 	border: 1px solid $color-4;
 	border-radius: 3px;
 	background: $color-5;
 	box-shadow: 0 1px 1px rgba(#000, .05);
 	padding: 6px;
+	width: 24.25%;
+	float: left;
+	margin-right:1%;
 }
 
-/* --------------------------------
+.card:last-of-type {
+	margin-right: 0;
+}
 
-xNavigation
-
--------------------------------- */
+// navigation
 
 header {
 	background-color: $color-2;
@@ -157,7 +201,7 @@ xTypography
 
 h1, h2 {
 	font-family: $secondary-font;
-	color: $color-2;
+	color: inherit;
 }
 
 h1 {
@@ -194,7 +238,6 @@ section > h2::before {
 p {
 	font-size: 1.4rem;
 	line-height: 1.4;
-	color: lighten($color-2, 25%);
 
 	a {
 		color: $color-1;

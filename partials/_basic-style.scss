@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 xBasic style
 
@@ -26,6 +26,11 @@ a {
 	text-decoration: none;
 }
 
+h1, p {
+	line-height: 125%;
+	padding-bottom: 2rem;
+}
+
 img {
 	max-width: 100%;
 }
@@ -36,11 +41,7 @@ input, textarea, select {
 }
 
 header {
-	position: fixed;
-	height: 50px;
 	width: 100%;
-	top: 0;
-	left: 0;
 	box-shadow: 0 1px 1px rgba(#000, .1);
 	z-index: 10;
 
@@ -49,7 +50,7 @@ header {
 	}
 
 	@include MQ(M) {
-		height: 80px;
+		//height: 80px;
 		@include clearfix;
 	}
 }
@@ -294,7 +295,7 @@ main {
 }
 
 section {
-	margin: 3em 0;
+	padding: 5em;
 	@include clearfix;
 
 	&:nth-of-type(1) h2::before {
@@ -319,19 +320,6 @@ section {
 
 	&:nth-of-type(6) h2::before {
 		content: '6. ';
-	}
-
-	@include MQ(S) {
-		margin: 3em 0 5em;
-	}
-
-	@include MQ(L) {
-		@include column(.48);
-		margin: 0 4% 4em 0;
-
-		&:nth-of-type(2n) {
-			margin-right: 0;
-		}
 	}
 }
 
@@ -529,7 +517,7 @@ section {
 		.cd-box {
 			padding: 2em;
 		}
-	} 
+	}
 }
 
 /* xTypography section - basic style */
@@ -576,35 +564,35 @@ section {
 	}
 
 	.cd-icon-1 {
-		background-image: url('../assets/icons/icon-1.svg'); 
+		background-image: url('../assets/icons/icon-1.svg');
 	}
 
 	.cd-icon-2 {
-		background-image: url('../assets/icons/icon-2.svg'); 
+		background-image: url('../assets/icons/icon-2.svg');
 	}
 
 	.cd-icon-3 {
-		background-image: url('../assets/icons/icon-3.svg'); 
+		background-image: url('../assets/icons/icon-3.svg');
 	}
 
 	.cd-icon-4 {
-		background-image: url('../assets/icons/icon-4.svg'); 
+		background-image: url('../assets/icons/icon-4.svg');
 	}
 
 	.cd-icon-5 {
-		background-image: url('../assets/icons/icon-5.svg'); 
+		background-image: url('../assets/icons/icon-5.svg');
 	}
 
 	.cd-icon-6 {
-		background-image: url('../assets/icons/icon-6.svg'); 
+		background-image: url('../assets/icons/icon-6.svg');
 	}
 
 	.cd-icon-7 {
-		background-image: url('../assets/icons/icon-7.svg'); 
+		background-image: url('../assets/icons/icon-7.svg');
 	}
 
 	.cd-icon-8 {
-		background-image: url('../assets/icons/icon-8.svg'); 
+		background-image: url('../assets/icons/icon-8.svg');
 	}
 }
 
