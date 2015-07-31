@@ -31,17 +31,20 @@ body {
 
 // page margins
 
-.page {
-	width:600px;
-	margin:0 auto;
+section, header {
+	padding: 5em;
 }
 
-header {
-	@extend .page
+.page {
+	width:100%;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 section, header {
-	> h1, > p {@extend .page;}
+	> h1, > p {
+		@extend .page;
+	}
 }
 
 // header
@@ -55,7 +58,7 @@ header {
 	}
 
 	h1 {
-		padding-top: 40rem;
+		padding-top: 30rem;
 	}
 }
 

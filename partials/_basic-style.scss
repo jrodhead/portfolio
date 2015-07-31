@@ -295,7 +295,6 @@ main {
 }
 
 section {
-	padding: 5em;
 	@include clearfix;
 
 	&:nth-of-type(1) h2::before {
