@@ -31,10 +31,6 @@ body {
 
 // page margins
 
-section, header {
-	padding: 5em;
-}
-
 .page {
 	width:100%;
 	max-width: 600px;
@@ -42,6 +38,10 @@ section, header {
 }
 
 section, header {
+	padding: 2em;
+	@include MQ(M) {
+		padding: 5em;
+	}
 	> h1, > p {
 		@extend .page;
 	}
@@ -50,7 +50,10 @@ section, header {
 // header
 
 header {
-	height: 60rem;
+	height: 40rem;
+	@include MQ(M) {
+		height: 60rem;
+	}
 
 	h1, p {
 		text-align: right;
@@ -58,7 +61,10 @@ header {
 	}
 
 	h1 {
-		padding-top: 30rem;
+		padding-top: 20rem;
+		@include MQ(M) {
+			padding-top: 30rem;
+		}
 	}
 }
 
@@ -85,14 +91,17 @@ section:nth-of-type(even) {
 }
 
 .card {
+	@extend .page;
 	border: 1px solid $color-4;
 	border-radius: 3px;
 	background: $color-5;
 	box-shadow: 0 1px 1px rgba(#000, .05);
-	padding: 6px;
-	width: 24.25%;
-	float: left;
-	margin-right:1%;
+	@include MQ(M) {
+		padding: 6px;
+		width: 24.25%;
+		float: left;
+		margin-right: 1%;
+	}
 }
 
 .card:last-of-type {
