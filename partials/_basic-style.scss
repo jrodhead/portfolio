@@ -8,11 +8,6 @@ xBasic style
 	@include box-sizing(border-box);
 }
 
-html * {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 html {
 	font-size: 62.5%;
 }
@@ -27,7 +22,7 @@ a {
 }
 
 h1, p {
-	line-height: 125%;
+	line-height: 145%;
 	padding-bottom: 2rem;
 }
 

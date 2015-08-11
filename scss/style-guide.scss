@@ -6,10 +6,10 @@
 
 // color palette - these colors will be the color swatches of the Colors section
 
-$color-1: #5f8ee4; // Cornflower Blue - Action color
-$color-2: #19191a; // Dark Blue
-$color-3: #e4655f; // Red
-$color-4: #e6e6e6; // light grey
+$color-1: #F5815F; // action peach
+$color-2: #000; // black
+$color-3: #758A80; // accent green
+$color-4: #A68D6F; // accent brown
 $color-5: #fff; // white
 
 // additional colors
@@ -19,8 +19,8 @@ $alert: $color-3;  // red
 
 // fonts
 
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
+$primary-font: 'Cardo', serif;
+$secondary-font: 'Julius Sans One', sans-serif;
 
 // background
 
@@ -61,27 +61,34 @@ header {
 	}
 
 	h1 {
+		font-size:3.4rem;
 		padding-top: 20rem;
+		padding-bottom: 0;
 		@include MQ(M) {
+			font-size: 5rem;
 			padding-top: 30rem;
 		}
+	}
+
+	p {
+		font-style: italic;
 	}
 }
 
 // sections
 section:nth-of-type(odd) {
 	background-color: $color-5;
-	color: $color-2;
+	color: darken	($color-2, 15%);
 	p {
-		color: lighten($color-2, 25%);
+		color: $color-2;
 	}
 }
 
 section:nth-of-type(even) {
 	background-color: $color-2;
-	color: $color-5;
+	color: lighten($color-5, 15%);
 	p {
-		color: lighten($color-5, 25%);
+		color: $color-5;
 	}
 }
 
@@ -220,7 +227,6 @@ h1 {
 	font-size: 2.4rem;
 	font-weight: 300;
 	line-height: 1.2;
-	margin: 0 0 .4em;
 
 	@include MQ(S) {
 		font-size: 3.2rem;
