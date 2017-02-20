@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 			var splitText = value.split('class="'),
 				block1 = splitText[0]+'class="';
 				block2 = splitText[1].split('"');
-				
+
 			var wrapperElement = $('<p></p>').text(block1),
 				spanElement = $('<span></span>').text(block2[0]);
 			spanElement.appendTo(wrapperElement);
@@ -56,7 +56,7 @@ jQuery(document).ready(function($){
 		headingDescriptionText = heading.children('span').eq(0),
 		body = heading.next('p'),
 		bodyDescriptionText = body.children('span').eq(0);
-		
+
 	setTypography(heading, headingDescriptionText);
 	setTypography(body, bodyDescriptionText);
 	$(window).on('resize', function(){
@@ -71,40 +71,4 @@ jQuery(document).ready(function($){
 		textElement.text(fontWeight + ' '+ fontFamily+' '+fontSize );
 	}
 
-	/*******************
-		main  navigation
-	********************/
-	var contentSections = $('main section');
-	//open navigation on mobile
-	$('.cd-nav-trigger').on('click', function(){
-		$('header').toggleClass('nav-is-visible');
-	});
-	//smooth scroll to the selected section
-	$('.cd-main-nav a[href^="#"]').on('click', function(event){
-        event.preventDefault();
-        $('header').removeClass('nav-is-visible');
-        var target= $(this.hash),
-        	topMargin = target.css('marginTop').replace('px', ''),
-        	hedearHeight = $('header').height();
-        $('body,html').animate({'scrollTop': parseInt(target.offset().top - hedearHeight - topMargin)}, 200); 
-    });
-    //update selected navigation element
-    $(window).on('scroll', function(){
-    	updateNavigation();
-    });
-
-    function updateNavigation() {
-		contentSections.each(function(){
-			var actual = $(this),
-				actualHeight = actual.height(),
-				topMargin = actual.css('marginTop').replace('px', ''),
-				actualAnchor = $('.cd-main-nav').find('a[href="#'+actual.attr('id')+'"]');
-			
-			if ( ( parseInt(actual.offset().top - $('.cd-main-nav').height() - topMargin )<= $(window).scrollTop() ) && ( parseInt(actual.offset().top +  actualHeight - topMargin )  > $(window).scrollTop() +1 ) ) {
-				actualAnchor.addClass('selected');
-			}else {
-				actualAnchor.removeClass('selected');
-			}
-		});
-	}
 });

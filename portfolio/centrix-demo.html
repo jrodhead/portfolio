@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Software Solutions to Detect Fraud, Manage Risk, and Simplify Compliance | Centrix Solutions</title>
+
+  <meta name="description" content="Centrix offers software solutions and custom software services to help organizations manage risk and optimize efficiency." />
+  <meta name="keywords" content="check fraud,EDI Reporting,check fraud prevention,Account Reconciliation,Pay Return Decision,check reconcilement,reverse positive pay,Decision File,check management,account reconcilement,positive pay,check reconciliation,positive pay software,check fraud detection,fraud prevention software,account reconciliation,Payee Match,ACH Positive Pay,ACH Fraud Filter,ACH Monitor,ACH Transaction Monitor,ACH debit block,deposit reconciliation,ACH fraud prevention,ACH debit filter,ACH fraud detection,check positive pay,ACH payments translation,ACH returns,ACH notice of change,ACH returns processing,ACH EDI translation,ACH EDI payments,ACH reporting,compliance reporting,Risk Reporting,Fraud Monitoring,Exposure monitoring,ACH Risk Management,NACHA risk reporting,NACHA Scheduling,NACHA returns reporting,NACHA Volume reporting,NACHA originator risk,NACHA fraud control,Ack risk assessement,standard entry class analysis,Ach fraud control,Origination Monitoring,originator Monitoring,ACH Board Reporting,OCC 2008-12,ACH Exposure reporting,ACH Scheduling,Ach risk reporting,ACH Fraud Monitoring,ACH Volume reporting,Ach originator risk,ACH File Validation,ACH Fraudulent Files,ACH risk management reviews,Ach returns reporting,NACHA Board Reporting,originator risk analysis,Origination risk analysis,NACHA risk assessement,OCC 2006-39,NACHA Fraud Monitoring,NACHA Exposure reporting,ODFI risk,NACHA Risk Management,NACHA risk management reviews,NACHA File Validation,originator Reporting,Origination Reporting,NACHA Fraudulent Files,OCC 2005-36,ODFI Origination Calendar,ODFI originator Calendar,OCC 2005-35,Submission Calendar,Originator Rules,regulation e,debit card disputes,reg e provisional credit,regulation e dispute,Reg E compliance,ATM disputes,ACH disputes,Reg E Error Resolution,Debit Card Dispute Tracking,Debit Card Error Resolution,remittmance disputes" />
+  <meta name="robots" content="index, follow, noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link id="Link1" runat="server" rel="shortcut icon" href="http://www.centrixsolutions.com/App_Themes/Centrix/Images/Content/Favicon.png" type="image/png" />
+  <link id="Link2" runat="server" rel="icon" href="http://www.centrixsolutions.com/App_Themes/Centrix/Images/Content/Favicon.png" type="image/png" />
+  <link rel="stylesheet" type="text/css" href="http://www.centrixsolutions.com/css/styles.min.css" />
+  <link id="colors" rel="stylesheet" type="text/css" href="http://www.centrixsolutions.com/css/colors/red.min.css" />
+  <link id="layout" rel="stylesheet" type="text/css" href="http://www.centrixsolutions.com/css/layout/wide.min.css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!--
+
+  Demo notes from Jared Headrick:
+
+  custom CSS begin immediately following this comment
+  use of absolute paths is for sake of demo only
+
+-->
+
+<style>
+  body {
+    color: #696969;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+  .header_container {
+    background: #ffffff;
+    border-bottom: 5px solid #82C441;
+    border-top:none;
+    height: 125px;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 3;
+  }
+
+  header h1.logo {
+    float: left;
+    padding: 20px 0px;
+  }
+
+  nav {
+    height: inherit;
+    padding-top: 71px;
+  }
+
+  nav ul.primary_nav > li {
+    height: 45px;
+  }
+
+  nav ul.primary_nav > li > a {
+    font-size: 18px;
+    text-transform: none;
+    padding: 15px 25px;
+  }
+
+  nav ul.primary_nav > li:hover > a {
+    background: #82C441;
+  }
+
+  nav ul.primary_nav li ul.sub_menu {
+    border-top: 5px solid #82C441;
+    top: 54px;
+  }
+
+  nav ul.primary_nav li ul.sub_menu li:first-of-type {
+    border-top: none;
+  }
+
+  #padtop {
+    height: 129px;
+  }
+
+  .section_container {
+    border-top: none;
+  }
+
+  .product_container {
+    border-top: solid 1px #dedede;
+  }
+
+  footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    background: #4f4f4f;
+    padding: 50px 20px;
+    font-size: 13px;
+    color: #bdbcbc;
+  }
+
+  footer > div {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+  }
+
+  footer ul {
+    float: left;
+    width: 33%;
+  }
+
+  footer lh {
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  footer a {
+    color: #bdbcbc;
+    font-weight: inherit;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  footer ul.social_media lh {
+    display: block;
+  }
+
+  footer ul.social_media li {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  footer ul li span.fa {
+    background: #6D6E71;
+    border-radius: 50%;
+    color: #4f4f4f;
+    height: 32px;
+    line-height: 32px;
+    font-size: 21px;
+    text-align: center;
+    width: 32px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  footer ul li span.fa:hover {
+    background: #bdbcbc;
+  }
+
+  @media only screen and (min-width: 480px)and (max-width: 767px) {
+    header h1.logo {
+      float: none;
+    }
+
+    .header_container {
+      height: inherit;
+      position: relative;
+    }
+
+    nav {
+      padding-top: 0;
+    }
+
+    .product_container {
+      height: inherit;
+    }
+
+    footer ul {
+      padding-top: 40px;
+      text-align: center;
+      width: 100%;
+    }
+
+    footer ul:first-of-type {
+      padding-top: 0;
+    }
+  }
+</style>
+
+<!-- end custom CSS -->
+
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/jquery.nivo.slider.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/jquery.prettyPhoto.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/jquery.jcarousel.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/jquery.jtweetsanywhere-1.3.1.min.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/jquery.tipsy.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/selectnav.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/js/custom.js"></script>
+  <script type="text/javascript" src="http://www.centrixsolutions.com/Javascript/Theme.Footer.js"></script>
+</head>
+<body id="top">
+  <div class="wrapper">
+    <div class="header_container">
+      <header>
+        <h1 class="logo"><a href="http://www.centrixsolutions.com/index.html"><img src="http://www.centrixsolutions.com/new-logo.jpg" alt="" /></a></h1>
+        <nav>
+          <ul class="primary_nav" id="nav">
+            <li>
+              <a class="active" href="http://www.centrixsolutions.com/corp_mission.html">About</a>
+              <ul class="sub_menu">
+                <li><a href="http://www.centrixsolutions.com/corp_mission.html">Mission / Service</a></li>
+                <li><a href="http://www.centrixsolutions.com/newsletter/Centrix_Company_Overview.pdf" target="_blank">Company Brochure</a></li>
+                <li><a href="http://www.centrixsolutions.com/management.html">Management</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="https://q2ebanking.com">Q2 Software, Inc.</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="http://www.centrixsolutions.com/products.html">Products</a>
+              <ul class="sub_menu">
+                <li><a href="http://www.centrixsolutions.com/products.html">Products Overview</a></li>
+                <li><a href="http://www.centrixsolutions.com/exact_tms.html">Check and ACH Positive Pay</a></li>
+                <li><a href="http://www.centrixsolutions.com/payments_iq.html">Originated ACH Validation and Reporting</a></li>
+                <li><a href="http://www.centrixsolutions.com/dispute_tracking_system.html">Regulation E Dispute Tracking</a></li>
+                <li><a href="http://www.centrixsolutions.com/ach_operations.html">ACH Operations</a></li>
+              </ul>
+            </li>
+            <li><a href="http://www.centrixsolutions.com/contact.html">Contact</a></li>
+            <li><a href="http://www.centrixsolutions.com/careers.html">Careers</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div id="padtop"></div>
+    <div class="banner_conainer">
+      <div class="banner">
+        <div id="banner_section" class="flexslider home_slider2" style="border-bottom: #82C441 solid 3px!important;">
+          <ul class="slides">
+            <li class="bg_image_2">
+              <div class="wrap">
+                <div class="slider_caption">
+                  <img src="http://www.centrixsolutions.com/centrix-dispute-w.png" alt="" />
+                  <h4 style="color: #82C441;">Debit Card Dispute Management (Reg E)</h4>
+                  <p style="color: white">Integrated Dispute Forms, Signature Pad Integration, Single or Multiple Transaction Disputes, Back Office Review/Approval, Automatic Transaction Creation, System Generated Customer Letters, Timeline Management,Case Management</p>
+                  <a href="http://www.centrixsolutions.com/dispute_tracking_system.html" class="button_big">More Information</a>
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+            </li>
+            <li class="bg_image_1">
+              <div class="wrap">
+                <div class="slider_caption">
+                  <img src="http://www.centrixsolutions.com/centrix-exact-w.png"S alt="" />
+                  <h4 style="color: #82C441;">Positive Pay & Account Reconciliation</h4>
+                  <p style="color: white">ACH Positive Pay, ACH Filter/Block, Check Positive Pay, Check Payee Match, Teller Integration, Full Account, Check and Deposit Reconciliation, ACH Detail Reporting (EDI Translation | Returns | NOC)</p>
+                  <a href="http://www.centrixsolutions.com/exact_tms.html" class="button_big">More Information</a>
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+            </li>
+            <li class="bg_image_3">
+              <div class="wrap">
+                <div class="slider_caption">
+                  <img src="http://www.centrixsolutions.com/centrix-payments-w.png" alt="" />
+                  <h4 style="color: #82C441;">Originated File Validation</h4>
+                  <p style="color: white">Account Takeover Protection, Real-time File Monitoring & more...</p>
+                  <h4 style="color: #82C441;">Risk Management Reporting</h4>
+                  <p style="color: white">ACH Transaction Activity Analysis, Customer Risk Review Worksheets & more...</p>
+                  <a href="http://www.centrixsolutions.com/payments_iq.html" class="button_big">More Information</a>
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+            </li>
+            <li class="bg_image_4">
+              <div class="wrap">
+                <div class="slider_caption">
+                  <img src="http://www.centrixsolutions.com/centrix-operations-w.png" alt="" />
+                  <p style="color: white">ACH File Generator, ACH Notice of Change Processing, ACH Returns Processing, ACH Detail Reporting (EDI Translation | Returns | NOC)</p>
+                  <a href="http://www.centrixsolutions.com/ach_operations.html" class="button_big">More Information</a>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+            </li>
+           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section_container">
+      <section>
+        <br class="clear" />
+        <br class="clear" />
+        <div class="three_fourth">
+          <h2>Software For Your Financial Institution</h2>
+          <h3 style="color: #82C441">Innovative Products | Extraordinary Service</h3>
+        </div>
+        <div class="one_fourth last"><a href="http://www.centrixsolutions.com/demoregister.aspx" class="button_big">Demo Sign Up</a></div>
+        <br class="clear" />
+        <br class="clear" />
+        <div class="product_container">
+          <center>
+            <br /><br />
+            <p><a href="http://www.centrixsolutions.com/exact_tms.html"><img src="http://www.centrixsolutions.com/centrix-exact.png" alt="" border="0" /></a> <a href="http://www.centrixsolutions.com/payments_iq.html"><img src="http://www.centrixsolutions.com/centrix-payments.png" alt="" border="0" /></a></p>
+            <p><a href="http://www.centrixsolutions.com/ach_operations.html"><img src="http://www.centrixsolutions.com/centrix-operations.png" alt="" border="0" /></a> <a href="http://www.centrixsolutions.com/dispute_tracking_system.html"><img src="http://www.centrixsolutions.com/centrix-dispute.png" alt="" border="0" /></a></p>
+          </center>
+        </div>
+        <div class="home_row">
+          <h2>Testimonials</h2>
+          <blockquote>
+            <script type="text/javascript">
+              /* Testimonials Fading Scroller */
+              //**Note: max steps*step delay will be total time in milliseconds of fading effect
+              var delay = 10000; //set delay between message change (in milliseconds)
+              var maxsteps = 30; // number of steps to take to change from start color to end color
+              var stepdelay = 50; // time in milliseconds of a single step
+              var startcolor = new Array(255, 255, 255); // start color (red, green, blue)
+              var endcolor = new Array(0, 0, 0); // end color (red, green, blue)
+              var fcontent = new Array();
+
+              begintag = '<div style="font:normal 14px Arial;padding:5px">'; //set opening tag, such as font declarations
+              fcontent[0] = "<div class='QuoteEnd'><i>ExactTMS provides our bank with the tools and solutions needed to protect our customers from Check and ACH fraud. The flexibility of ExactTMS to meet the needs of all sizes of businesses, along with the service level of Centrix, has made it a successful product for our organization.</i></div><i><b>VP eBanking Services Manager, $1.9 Billion Financial Institution</b></i>";
+              fcontent[1] = "<div class='QuoteEnd'><i>Thanks again for all your help the other day! I wish all of our vendors were so responsive and easy to deal with.</i></div><i><b>Senior Server Administrator, Network Services, $1.6 Billion Financial Institution</b></i>";
+              fcontent[2] = "<div class='QuoteEnd'><i>Centrix is one of the most responsive and customer oriented vendors our bank works with. We use their Exact/TMS product for positive pay because it is functionally rich, well received by our commercial customers, and easy to support. You truly are one of the best 'vendors' to work with that I have ever dealt with. I appreciate how you are always willing to do way more than you have to.</i></div><i><b>Vice President, Treasury Services, $10.5 Billion Financial Institution</b></i>";
+              fcontent[3] = "<div class='QuoteEnd'><i>We have just gone through an internal audit for Reg E Disputes which was the quickest (YES!) and most painless that I have ever experienced. It was so nice to be able to print dispute history from your DTS software and hand that over for them to verify that all the timelines had been met and letters sent etc. Really nice.</i></div><i><b>VP - Electronic Banking, $13 Billion Financial Institution</b></i>";
+              fcontent[4] = "<div class='QuoteEnd'><i>We love the program and we love the responses we get to our requests. Of all the vendors I have worked with, Centrix is probably been the easiest to work with.</i></div><i><b>Product Manager, $2.4 Billon Financial Institution</b></i>";
+              fcontent[5] = "<div class='QuoteEnd'><i>I just wanted to say thanks to you guys for always being available and always addressing and resolving issues in a very timely manner. When you work with other vendors that can’t or don’t provide even mediocre support, it really makes you appreciate that ones that go above and beyond to provide excellent support.</i></div><i><b>Senior Product Specialist, $509 Million Financial Institution</b></i>";
+              closetag = '</div>';
+
+              var fwidth = '100%'; //set scroller width
+              var fheight = '100%'; //set scroller height
+              var fadelinks = 1;  //should links inside scroller content also fade like text? 0 for no, 1 for yes.
+              var ie4 = document.all && !document.getElementById;
+              var DOM2 = document.getElementById;
+              var faderdelay = 0;
+              var index = 0;
+
+              function changecontent() {
+                if (index >= fcontent.length) { index = 0 }
+                if (DOM2) {
+                  document.getElementById("fscroller").style.color = "rgb(" + startcolor[0] + ", " + startcolor[1] + ", " + startcolor[2] + ")"
+                  document.getElementById("fscroller").innerHTML = begintag + fcontent[index] + closetag
+                  if (fadelinks) { linkcolorchange(1); colorfade(1, 15); }
+                }
+                else if (ie4) { document.all.fscroller.innerHTML = begintag + fcontent[index] + closetag; }
+                index++
+              }
+              function linkcolorchange(step) {
+                var obj = document.getElementById("fscroller").getElementsByTagName("A");
+                if (obj.length > 0) {
+                  for (i = 0; i < obj.length; i++)
+                    obj[i].style.color = getstepcolor(step);
+                }
+              }
+
+              var fadecounter;
+
+              function colorfade(step) {
+                if (step <= maxsteps) {
+                  document.getElementById("fscroller").style.color = getstepcolor(step);
+                  if (fadelinks) { linkcolorchange(step); }
+                  step++;
+                  fadecounter = setTimeout("colorfade(" + step + ")", stepdelay);
+                } else {
+                  clearTimeout(fadecounter);
+                  document.getElementById("fscroller").style.color = "rgb(" + endcolor[0] + ", " + endcolor[1] + ", " + endcolor[2] + ")";
+                  setTimeout("changecontent()", delay);
+                }
+              }
+              function getstepcolor(step) {
+                var diff
+                var newcolor = new Array(3);
+                for (var i = 0; i < 3; i++) {
+                  diff = (startcolor[i] - endcolor[i]);
+                  if (diff > 0) {
+                    newcolor[i] = startcolor[i] - (Math.round((diff / maxsteps)) * step);
+                  } else {
+                    newcolor[i] = startcolor[i] + (Math.round((Math.abs(diff) / maxsteps)) * step);
+                  }
+                }
+                return ("rgb(" + newcolor[0] + ", " + newcolor[1] + ", " + newcolor[2] + ")");
+              }
+
+              if (ie4 || DOM2) { document.write('<div id="fscroller" style="border:0px solid black;width:' + fwidth + ';height:' + fheight + '"></div>'); }
+              if (window.addEventListener) { window.addEventListener("load", changecontent, false) }
+              else if (window.attachEvent) { window.attachEvent("onload", changecontent) }
+              else if (document.getElementById) { window.onload = changecontent }
+            </script>
+            <br />
+            <p><a href="http://www.centrixsolutions.com/testimonials.html">View All Testimonials</a></p>
+          </blockquote>
+        </div>
+      </section>
+      <br class="clear" />
+    </div>
+    <footer><div>
+      <ul>
+        <lh>Links</lh>
+        <li><a href='http://www.centrixsolutions.com/corp_mission.html'>About</a></li>
+        <li><a href='http://www.centrixsolutions.com/products.html'>Products</a></li>
+        <li><a href='http://www.centrixsolutions.com/contact.html'>Contact</a></li>
+        <li><a href='http://www.centrixsolutions.com/careers.html'>Careers</a></li>
+        <li><a href='http://www.centrixsolutions.com/demoregister.aspx'>Demo Sign Up</a></li>
+        <li><a href="http://www.centrixsolutions.com/news_archive.html">News</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href='mailto:" + page + "'>Support</a></li>
+      </ul>
+
+      <ul class="social_media">
+        <lh>Social Media</lh>
+        <li>
+          <a href="https://www.facebook.com/Q2ebanking" target="_blank" title="Q2 Facebook" alt="Q2 Facebook">
+            <span class="fa fa-facebook social-facebook"></span>
+            <span style="display:none;">Q2 Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/q2ebanking" target="_blank">
+            <span class="fa fa-twitter social-twitter"></span>
+            <span style="display:none;">Q2 Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/q2ebanking" target="_blank">
+            <span class="fa fa-linkedin social-linkedin"></span>
+            <span style="display:none;">Q2 LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/q2ebanking/" target="_blank">
+            <span class="fa fa-instagram social-gplus"></span>
+            <span style="display:none;">Q2 Google Plus</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/Q2GrowBeyond" target="_blank">
+            <span class="fa fa-youtube social-youtube"></span>
+            <span style="display:none;">Q2 Youtube</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <lh>Contact Information</lh>
+        <li>402.488.3990 <a href="mailto:info@centrixsolutions.com" target="_blank">&nbsp;
+        <span class="fa fa-envelope social-mailer" style="font-size:20px;"></span><span style="display:none;">Centrix Solutions Contact Us</span></a></li>
+        <li>1560 South 70th Street</li>
+        <li>Lincoln, NE 68506</li>
+        <li><a href="#" style="color:#fff;">privacy policy</a> | <a href="#" style="color:#fff;">site map</a></li>
+        <li>&nbsp;</li>
+        <li>&copy; Copyright 2006-2015 Centrix Solutions, Inc. All Rights Reserved</li>
+      </ul>
+
+    </div></footer>
+  </div>
+</body>
+</html>
