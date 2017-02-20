@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta property="og:title" content="Jared Headrick" />
+<meta property="og:type" content="Product Design" />
+<meta property="og:url" content="http://www.jaredheadrick.com" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="Jared Headrick" />
+<meta name="keywords" content="jared headrick, product design, ux, ui, web, design, lincoln, nebraska" />
+<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+<meta name = "format-detection" content = "telephone=no">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One|Cardo:400,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../css/normalize.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="../css/style-guide.css"> <!-- Resource style -->
+<script src="../js/modernizr.js"></script> <!-- Modernizr -->
+<style>
+
+</style>
+<title>Guerilla Usability Testing: Centrix</title>
+<!-- add google analytics tracking here -->
+</head>
+<body>
+	<header role="banner" class="centrix">
+		<h1>Guerilla Usability Testing: Centrix</h1>
+	</header>
+	<nav>
+		<div class="logo">
+			<a href="default.html">Jared Headrick</a>
+		</div>
+		<ul>
+			<li><a href="default.html">View My Portfolio</a></li>
+	</nav>
+	<article>
+		<h2>Objective</h2>
+  	<p>
+			Identify pain points in the presentation of Centrix Solutions’ company website.
+		</p>
+
+		<h2>Target User</h2>
+  	<p>
+			Prospective customer from a community bank who is searching for information about Centrix products.
+		</p>
+
+		<h2>Key Function</h2>
+		<p>
+			In order to identify the key function of the website, I prioritized tasks based on how important I expected them to be to users and to Centrix's bottom line. I used this prioritization scheme to focus user testing on the highest-impact task.
+		</p>
+		<figure>
+			<img src="../img/centrix/prioritized.png" alt="Prioritizing website functionality">
+			<figcaption>
+				Prioritizing website functionality.
+			</figcaption>
+		</figure>
+
+		<h2>Tasks</h2>
+  	<p>
+			After identifying the need to find product information as the key function of the website, I started users at centrixsolutions.com and asked them to find a product that helps prevent fraud.
+		</p>
+
+		<h2>Common Findings</h2>
+		<blockquote>
+			<p>
+				"Are Centrix products still available?"<br>
+				"Do I need to go to the Q2 or Centrix website for more information?"
+			</p>
+		</blockquote>
+		<figure>
+			<img src="../img/centrix/splash.png" alt="Q2 acquisition splash page">
+			<figcaption>
+				Prioritizing website functionality.
+			</figcaption>
+		</figure>
+  	<p>
+			The first page of the website is dedicated to Centrix being a Q2 company. The primary action on this page is to "Learn More" about the acquisition, which takes the user to a press release on the Q2 website, where there is no information about Centrix products. This 'Learn More' button can be hidden behind the secondary action if the viewport height is short enough, which completely breaks the purpose of this page (to provide more information about the acquisition).
+		</p>
+		<blockquote>
+			<p>
+				"This is annoying. It seems like they're more proud of their owners than their products."
+			</p>
+		</blockquote>
+		<p>
+			Once on the Centrix website and browsing, the user expects to be able to click the company logo to return to the home page. Instead, they are taken back to the splash page, which increases the user's frustration each time they land on it.
+		</p>
+
+		<h2>Recommendation</h2>
+		<p>
+			Skip the acquisition page to bring focus back to the task with the most value - providing product information. An alternative to informing people of the acquisition could be to provide a link to the press release on the home page or in the news section and to make the branding more consistent between Centrix and Q2.
+		</p>
+
+		<h2>Solution</h2>
+  	<p>
+			To increase consistency between the Q2 and Centrix websites, header and footer styles should match. Since we will be using the Q2 website styles to guide us, there is no need to create wireframes or prototypes. Instead, I went straight to a <a href="centrix-demo.html" target="_blank">high-fidelity HTML/CSS prototype</a>.
+		</p>
+		<figure>
+			<a href="centrix-demo.html" target="_blank"><img src="../img/centrix/solution.png" alt="High fidelity prototype"></a>
+			<figcaption>
+				High fidelity HTML/CSS prototype.
+			</figcaption>
+		</figure>
+
+		<h2>Next Steps *</h2>
+		<p>
+			There are a number of changes needed to further encourage consistency between the two websites. Below is a list of changes on the home page that have been identified so far - some related to style consistency, others related to finding product information. Aside from this list, user feedback and website analytics will help determine new tasks as well as their priorities.
+		</p>
+
+		<ul>
+			<li>Clarify product value on home page</li>
+			<li>Difficult to read 'a Q2 Company' in Centrix logo</li>
+			<li>Update fonts to match Q2</li>
+			<li>Update sub-menu styles and animations to match Q2</li>
+			<li>Update content styles to match Q2</li>
+			<li>Update slideshow styles and animations to match Q2</li>
+			<li>Update responsive menu styles to match Q2</li>
+			<li>Update responsive footer styles to match Q2</li>
+			<li>Have to wait for slide for product information</li>
+			<li>Accessibility issues: missing alt tags for images</li>
+			<li>Slideshow has most product information but user has to wait for slide to see details</li>
+			<li>Icons for all products are the same, which causes confusion with company logo</li>
+			<li>Add slide for acquisition information</li>
+			<li>Add acquisition press release to News Page</li>
+			<li>Fix page width issues on smaller screens</li>
+		</ul>
+
+		<p>
+			* I'm not affiliated with Centrix Solutions in any way.
+		</p>
+	</article>
+
+	<!--
+	<footer>
+	<p role="contentinfo">&copy; <?php echo date("Y") ?> Jared Headrick</p>
+	</footer>
+-->
+</body>
