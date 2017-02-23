@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Jared Headrick</title>
+
+		<meta property="og:title" content="Jared Headrick" />
+		<meta property="og:type" content="Product Design" />
+		<meta property="og:url" content="http://www.jaredheadrick.com" />
+		<meta property="og:image" content="" />
+		<meta property="og:site_name" content="Jared Headrick" />
+		<meta name="keywords" content="jared headrick, product design, ux, ui, web, design, lincoln, nebraska" />
+
+		<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+		<meta name = "format-detection" content = "telephone=no">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+		<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One|Cardo:400,400italic' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/style-guide.css">
+		<script src="../js/modernizr.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+		<header role="banner">
+			<h1>Jared Headrick</h1>
+			<p>JavaScript Playground</p>
+		</header>
+
+		<section>
+			<h1>Conditionals</h1>
+			<form>
+				Enter an amount: $<input type="text" name="TDI" id="TDI" onkeydown="readTDI(this)" size="6" value="600" />
+				<!-- add this functionality after figuring out the $600 limit
+				 and <select name="statusCode" id="statusCode">
+					<option value="">Select a status code</option>
+					<option value="a">a</option>
+					<option value="b">b</option>
+					<option value="c">c</option>
+				</select>
+			-->
+			</form>
+	  	<p>Does the borrower get tax info? <span class="condition"></span></p>
+		</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/jquery-2.1.1.js"><\/script>')</script>
+	<script>
+		var tdiAmount = document.getElementById('TDI').value;
+		function readTDI(tdiAmount) {return tdiAmount;} // this returns the original value, but still need to update tdiAmount onkeydown
+		if (tdiAmount>=600) {
+			$('.condition').replaceWith('yes!');
+		}
+		else {
+			$('.condition').replaceWith('no!');
+		}
+	</script>
+	</body>
+</html>
