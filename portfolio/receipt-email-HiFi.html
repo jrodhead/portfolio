@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Store Name - Receipt Number</title>
+<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
+<meta name = "format-detection" content = "telephone=no" />
+</head>
+
+<!-- body styles -->
+<body style="background-color:#cccccc;color:#444444;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:21px;">
+
+	<!-- receipt border styles -->
+	<div style="background-color:#ffffff;border-radius:5px;box-shadow:#333333 0px 1px 5px;">
+
+		<!-- header: configured per line in WPAadmin -->
+		<p style="background-color:#e5e5e5;border-radius:5px 5px 0 0;border-bottom:1px solid #cccccc;margin:0;padding:28px 21px;text-align:center;">
+			Header Line 1<br/>
+			Header Line 2<br/>
+			Header Line 3<br/>
+			Header Line 4<br/>
+			Header Line 5<br/>
+		</p>
+
+		<!-- WPAdmin receipt template options (1 of 2) -->
+		<p style="margin:0;padding:21px;">
+			Transaction Type<br/>
+			Receipt Number Label: Receipt Number<br/>
+			Location Label: Location ID<br/>
+			Location<br/>
+			POS Label: POSID<br/>
+			POS<br/>
+			Register Label: Register<br/>
+			Cashier Label: Cashier<br/>
+			DateTime<br/>
+			Student ID Label: Student ID<br/>
+			Student Name Label: Student Name<br/>
+		</p>
+
+		<!-- transaction detail table -->
+		<div style="padding:0 21px">
+		<table style="border-bottom:4px solid #cccccc;border-collapse:collapse;width:100%;">
+
+			<!-- item detail table header -->
+			<tr style="background:#e5e5e5;height:35px;">
+				<th style="text-align:left;">Quantity Label</th>
+				<th style="text-align:left;">Description Label</th>
+				<th style="text-align:right;">Price Label</th>
+			</tr>
+
+			<!-- item details -->
+			<tr style="border-bottom:1px solid #e5e5e5;vertical-align:top;">
+				<td><span style="display:block;padding:7px 0;">Quantity</span></td>
+				<td><span style="display:block;padding:7px 0;">Item Description</span>
+					<p style="margin:0;padding-bottom:10px;">
+						- SKU Label: SKU<br/>
+						- ISBN Label: ISBN<br/>
+						- DCC Label: DCC<br/>
+						- Tax Indicator Label: Tax Indicator<br/>
+						- Sale Flag Label: Sale Flag<br/>
+					</p>
+				</td>
+				<td style="text-align:right;">
+					<p style="margin:0;padding:7px 0;text-align:right;">
+						Item Price<br/>
+						Item Discount Label: Item Discount<br/>
+					</p>
+				</td>
+			</tr>
+
+			<!-- subtotals, taxes, and discounts -->
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Tax Shift Profile Label:</td>
+				<td>Tax Shift Profile</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Subtotal Label:</td>
+				<td>Subtotal</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Tax Exempt Label:</td>
+				<td>Tax Exempt</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Transaction Discount Label:</td>
+				<td>Transaction Discount</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Tax Summary Label:</td>
+				<td>Tax Summary</td>
+			</tr>
+
+			<!-- totals -->
+			<tr style="border-top:1px solid #cccccc;text-align:right;">
+				<td></td>
+				<td>Total Price Label:</td>
+				<td>Total Price</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Tender Label:</td>
+				<td>Tender</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Tender Balance Label:</td>
+				<td>Tender Balance</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Change Due Label:</td>
+				<td>Change Due</td>
+			</tr>
+			<tr style="text-align:right;">
+				<td></td>
+				<td>Tax Summary Label:</td>
+				<td>Tax Summary</td>
+			</tr>
+
+		</table>
+		</div>
+
+		<!-- WPAdmin receipt template options (2 of 2)-->
+		<p style="margin:0;padding:21px;">
+			Membership Plan<br/>
+			Membership Spent Label: Membership Spent<br/>
+			Membership ID Label: Membership ID<br/>
+			Membership Name Label: Membership Name<br/>
+			Signature Line 1<br/>
+			Signature Line 2<br/>
+			Signature Line 3<br/>
+			Auth Code Label: Auth Code<br/>
+			Expiration Date Label: Expiration Date<br/>
+			Tender Acct Label: Tender Acct<br/>
+		</p>
+
+		<!-- footer: configured per line in WPAadmin -->
+		<p style="background-color:#e5e5e5;border-radius:0 0 5px 5px;border-top:1px solid #cccccc;margin:0;padding:28px 21px;text-align:center;">
+			Footer Line 1<br/>
+			Footer Line 2<br/>
+			Footer Line 3<br/>
+			Footer Line 4<br/>
+			Footer Line 5<br/>
+		</p>
+
+	</div>
+</body>
+
+</html>

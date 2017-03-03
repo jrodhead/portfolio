@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="Jared Headrick" />
+  <meta property="og:type" content="Product Design" />
+  <meta property="og:url" content="http://www.jaredheadrick.com" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="Jared Headrick" />
+  <meta name="keywords" content="jared headrick, product design, ux, ui, web, design, lincoln, nebraska" />
+  <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+  <meta name = "format-detection" content = "telephone=no">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One|Cardo:400,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../css/normalize.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="../css/style-guide.css"> <!-- Resource style -->
+  <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+  <title>Jared Headrick Portfolio: Responsive Receipt Email</title>
+</head>
+<body>
+	<header role="banner" class="NoNcom">
+		<h1>Responsive Receipt Email</h1>
+	</header>
+	<nav>
+		<div class="logo">
+			<a href="default.html">Jared Headrick</a>
+		</div>
+		<ul>
+			<li><a href="default.html">View My Portfolio</a></li>
+	</nav>
+	<article>
+    <h2>Problem</h2>
+    <p>
+      When viewing an email receipt on small screens or windows (like on a mobile phone), the layout and line wrapping makes the entire receipt difficult to read. Two issues were brought to our attention:
+    </p>
+    <ol>
+      <li>
+        When viewing an email receipt on small screens or windows (like on a mobile phone), the layout and line wrapping makes the entire receipt difficult to read
+      </li>
+      <li>
+        Blank space displays on printed receipts when data is configured to display but does not exist on a transaction
+      </li>
+    </ol>
+    (screenshot)
+
+    <h2>Objective</h2>
+    <p>
+      Improve readability of sales receipts sent by an in-store Point of Sale system. The email must be generic enough to be applied across 400+ stores across the country with much of the content being variable options within the software or from the transaction.
+    </p>
+
+    <h2>Acceptance Criteria</h2>
+    <ul>
+      <li>
+        Receipt must be easy to read and comprehend on the top 5 most-used email clients according to https://emailclientmarketshare.com/oReadability.Receipt
+      </li>
+      <li>
+        Average time for a first-time customer to correctly identify an individual piece of information on a receipt (for example, the price of an item): Target: 5 seconds; Stretch: 3 seconds; Fail: 10 seconds;
+      </li>
+      <li>
+        If data is configured to print but does not exist on the transaction, the placeholder for that data should be removed
+      </li>
+    </ul>
+
+		<h2>Toolbox</h2>
+  	<p>
+			HTML, CSS, Responsive Emails, Low- and High-Fidelity Mockups
+		</p>
+
+    <figure>
+      <img src="../img/360/cs-desktop-email.png" alt="Desktop view of email">
+      <figcaption>
+        Desktop view of email
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../img/360/cs-phone1.png" alt="Current State: Phone View of Receipt Header">
+      <figcaption>
+        Current State: Phone View of Receipt Header
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../img/360/cs-phone2.png" alt="Current State: Phone View of Receipt Items">
+      <figcaption>
+        Current State: Phone View of Receipt Items
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../img/360/cs-phone3.png" alt="Current State: Phone View of Receipt Totals">
+      <figcaption>
+        Current State: Phone View of Receipt Totals
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../img/360/cs-phone4.png" alt="Current State: Phone View of Receipt Footer">
+      <figcaption>
+        Current State: Phone View of Receipt Footer
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../img/360/Planning.jpg" alt="Low-Fidelity Mockup and Variable Discovery">
+      <figcaption>
+        Low-Fidelity Mockup and Variable Discovery
+      </figcaption>
+    </figure>
+
+    <h2>View this template</h2>
+    <p>
+      <a href="receipt-email-HiFi.html">High-fidelity mockup of receipt</a>
+    </p>
+
+	</article>
+
+	<!--
+	<footer>
+	<p role="contentinfo">&copy; <?php echo date("Y") ?> Jared Headrick</p>
+	</footer>
+-->
+</body>
